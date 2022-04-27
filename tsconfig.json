@@ -1,24 +1,27 @@
 {
   "compilerOptions": {
-    "target": "es2017",
-    "lib": ["es2017", "esnext.asynciterable"],
+    "module": "ES2015",
+    "target": "ES2015",
+    "lib": ["ES2015"],
+    // "target": "es2017",
+    // "lib": ["es2017", "esnext.asynciterable"],
     "typeRoots": ["./node_modules/@types", "./src/types"],
     "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "forceConsistentCasingInFileNames": true,
+    // "experimentalDecorators": true,
+    // "emitDecoratorMetadata": true,
+    // "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
-    "module": "commonjs",
-    "pretty": true,
-    "sourceMap": true,
-    "outDir": "./build",
-    "allowJs": true,
-    "noEmit": false,
+    // "module": "commonjs",
+    // "pretty": true,
+    // "sourceMap": true,
+    // "outDir": "./build",
+    // "allowJs": true,
+    // "noEmit": false,
     "esModuleInterop": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    // "baseUrl": ".",
+    // "paths": {
+    //   "@/*": ["./src/*"]
+    // }
   },
   "include": ["./src/**/*"],
   "exclude": ["node_modules", "tests"]
