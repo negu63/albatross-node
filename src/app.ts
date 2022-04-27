@@ -9,7 +9,7 @@ async function startServer() {
   await Loaders({ expressApp: app });
 
   app
-    .listen(config.port, () => {
+    .listen(config.port, "0.0.0.0", () => {
       Logger.info(`Server listening on port: 3000`);
     })
     .on("error", (err) => {
