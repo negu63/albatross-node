@@ -1,5 +1,5 @@
-import isValid from "./isValid";
+import isValidSignature from "./isValidSignature";
 
 export default {
-  isValid,
+  isValidSignature,
 };
