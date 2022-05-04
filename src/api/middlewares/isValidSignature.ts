@@ -9,7 +9,7 @@ const isValidSignature = async (
 ) => {
   try {
     const sig = req.headers.authorization;
-    const publicB = req.body.publicKey;
+    const publicB = req.body.publicKey ?? process.env.PUBLIC_KEY;
     const msgHash = await hashMessage(req.body.encryptedData);
 
     const isValid = secp.verify(sig, msgHash, publicB);
