@@ -1,8 +1,8 @@
-import { decryptWithECDH } from "../../lib/ecdh";
-import getCurrentDate from "../../lib/getCurrentDate";
+import { decryptWithECDH } from "../../../lib/ecdh";
+import getCurrentDate from "../../../lib/getCurrentDate";
 import { Request, Response, Router } from "express";
-import middlewares from "../middlewares";
-import { Signature } from "../../interfaces/Signature";
+import middlewares from "../../middlewares";
+import { Signature } from "../../../interfaces/Signature";
 import fs from "fs";
 import { JSONFile, Low } from "lowdb";
 
@@ -12,7 +12,7 @@ export default (app: Router) => {
   app.use("/signature", route);
 
   route.post(
-    "/receive",
+    "/",
     middlewares.isValidSignature,
     async (req: Request, res: Response) => {
       // Decrypt data
