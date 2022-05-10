@@ -1,15 +1,15 @@
 import { Request, Response, Router } from "express";
 import fs from "fs";
-import { decryptWithECDH } from "../../lib/ecdh.js";
-import middlewares from "../middlewares/index.js";
+import { decryptWithECDH } from "../../../lib/ecdh.js";
+import middlewares from "../../middlewares/index.js";
 
 const route = Router();
 
 export default (app: Router) => {
   app.use("/signature", route);
 
-  route.post(
-    "/accept",
+  route.put(
+    "/",
     middlewares.isValidSignature,
     async (req: Request, res: Response) => {
       // Decrypt data
