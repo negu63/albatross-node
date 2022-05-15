@@ -11,7 +11,7 @@ export default (app: Router) => {
   app.use("/signature", route);
 
   route.get(
-    "/",
+    "/all",
     middlewares.isValidSignature,
     async (req: Request, res: Response) => {
       // Generate signature list
