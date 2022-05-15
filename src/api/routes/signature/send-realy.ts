@@ -26,7 +26,7 @@ export default (app: Router) => {
       const encryptedData = await encryptWithECDH(
         JSON.stringify({ ip: process.env.PUBLIC_IP }),
         process.env.PRIVATE_KEY,
-        process.env.PUBLIC_KEY
+        data.publicKey
       );
       const sig = await generateSignature(
         encryptedData,
