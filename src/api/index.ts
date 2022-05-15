@@ -1,6 +1,6 @@
 import { Router } from "express";
 import sendSignature from "./routes/signature/send.js";
-import sendSignatureRelay from "./routes/signature/send-realy";
+import sendSignatureRelay from "./routes/signature/send-relay";
 import acceptSignature from "./routes/signature/accept";
 import rejectSignature from "./routes/signature/reject.js";
 import listSignature from "./routes/signature/list.js";

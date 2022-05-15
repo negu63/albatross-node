@@ -34,7 +34,7 @@ export default (app: Router) => {
       );
       return await axios
         .post(
-          `http://${data.ip}:3000/api/signature`,
+          `http://${data.ip}:57700/api/signature`,
           JSON.stringify({
             publicKey: process.env.PUBLIC_KEY,
             encryptedData,
