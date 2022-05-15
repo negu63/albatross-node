@@ -55,12 +55,12 @@ export default (app: Router) => {
         version: 0,
         publicKey: "",
         encryptedData: "",
-        receivedDate: "",
+        createAt: "",
       };
       db.data.version = 1;
       db.data.publicKey = req.body.publicKey;
       db.data.encryptedData = req.body.encryptedData;
-      db.data.receivedDate = getCurrentDate();
+      db.data.createAt = getCurrentDate();
       await db.write();
 
       return res.sendStatus(200);

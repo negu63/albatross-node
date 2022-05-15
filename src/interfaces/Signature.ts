@@ -2,7 +2,7 @@ interface Signature {
   version: number;
   publicKey: string;
   encryptedData: string;
-  receivedDate: string;
+  createAt: string;
 }
 
 export { Signature };
