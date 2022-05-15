@@ -32,14 +32,13 @@ export default (app: Router) => {
         encryptedData,
         process.env.PRIVATE_KEY
       );
-
       return await axios
         .post(
           `http://${data.ip}:3000/api/signature`,
-          {
+          JSON.stringify({
             publicKey: process.env.PUBLIC_KEY,
             encryptedData,
-          },
+          }),
           {
             headers: { Authorization: sig, "Content-Type": "application/json" },
           }
