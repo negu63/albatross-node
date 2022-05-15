@@ -53,11 +53,13 @@ export default (app: Router) => {
       await db.read();
       db.data ||= {
         version: 0,
+        sig: "",
         publicKey: "",
         encryptedData: "",
         createAt: "",
       };
       db.data.version = 1;
+      db.data.sig = req.headers.authorization;
       db.data.publicKey = req.body.publicKey;
       db.data.encryptedData = req.body.encryptedData;
       db.data.createAt = getCurrentDate();
