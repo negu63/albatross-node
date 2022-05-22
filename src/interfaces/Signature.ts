@@ -1,8 +1,8 @@
 interface Signature {
   version: number;
   sig: string;
+  ip: string;
   publicKey: string;
-  encryptedData: string;
   createAt: string;
 }
 
