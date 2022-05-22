@@ -44,7 +44,7 @@ export default (app: Router) => {
         await axios.post(
           `http://${reqData.ip}:3000/api/signatures/share`,
           JSON.stringify({
-            publicKey: reqData.publicKey,
+            publicKey: process.env.PUBLIC_KEY,
             encryptedData,
           }),
           {
