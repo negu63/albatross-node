@@ -4,6 +4,7 @@ import getSignature from "./routes/signatures/get";
 import querySignature from "./routes/signatures/query";
 import shareSignature from "./routes/signatures/share";
 import getPublicKey from "./routes/key/get"
+import inviteChat from "./routes/chats/invite"
 
 export default () => {
   const app = Router();
@@ -14,6 +15,8 @@ export default () => {
   shareSignature(app)
 
   getPublicKey(app)
+
+  inviteChat(app)
 
   return app;
 };
