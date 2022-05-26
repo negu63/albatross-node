@@ -1,5 +1,5 @@
 interface ChatInfo {
-  roomHash: string;
+  chatHash: string;
   members: string[];
   messageCount: number;
   recent?: RecentMessage;
