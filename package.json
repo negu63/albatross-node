@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@noble/secp256k1": "^1.5.5",
+    "@peculiar/webcrypto": "^1.4.0",
     "@types/crypto-js": "^4.1.1",
     "axios": "^0.27.2",
     "cors": "^2.8.5",
